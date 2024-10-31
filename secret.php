@@ -12,9 +12,9 @@
 </head>
 
     <?php  require_once("./components/header.php") ?>
-    <div class="container">
-        <h1>Secret information</h1>
-        <p>Complete name: Benedikt Martin Brenk</p>
-        <p>Adress: I will not reveal my adress on GitHub</p>
+    <div class="container text-center my-4">
+            <h1>Secret information</h1>
+            <p>Complete name: Benedikt Martin Brenk</p>
+            <p>Adress: I will not reveal my adress on GitHub</p>
     </div>
     <?php  require_once("./components/footer.php") ?>
