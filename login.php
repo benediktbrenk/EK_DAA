@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["user_name"]) && isset
     $firstName = "Benedikt";
     $lastName = "Brenk";
 
-    $User = new User($exampleName, $examplePassword, $firstName, $lastName);
-    $User->senderName = $exampleName;
-    $User->senderPassword = $examplePassword;
-    $User->firstName = $firstName;
-    $User->lastName = $lastName;
+    $User = new User();
+    $User->setSenderName($exampleName);
+    $User->setPassword($examplePassword);
+    $User->setFirstName($firstName);
+    $User->setLastName($lastName);
 
     $send_result = $User->login($_POST["user_name"], $_POST["password"]);
     
@@ -23,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["user_name"]) && isset
         $result = "Wrong user name or password!";
     }
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="de">
