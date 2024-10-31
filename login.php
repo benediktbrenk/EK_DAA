@@ -11,8 +11,7 @@
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
-<body>
-    <?php  require_once("./components/navbar.php") ?>
+    <?php  require_once("./components/header.php") ?>
     <div class="container">
         <h1>Login</h1>
         <form>

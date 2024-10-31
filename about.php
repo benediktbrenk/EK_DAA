@@ -11,8 +11,7 @@
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
-<body>
-    <?php  require_once("./components/navbar.php") ?>
+    <?php  require_once("./components/header.php") ?>
     <div class="container">
         <h1>Über mich</h1>
         <p>My learnings</p>
@@ -20,5 +19,16 @@
             <li>PHP require_once</li>
             <li>Bootstrap Arbeit mit Templates</li>
         </ol>
+        <form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht:</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kontaktiere mich</button>
+        </form>
     </div>
     <?php  require_once("./components/footer.php") ?>
