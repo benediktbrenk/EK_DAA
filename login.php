@@ -1,3 +1,31 @@
+<?php  
+require_once("./app/User.php");
+
+$result = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["user_name"]) && isset($_POST["password"])) {
+    $exampleName = "benedikt";
+    $examplePassword = "passwort";
+    $firstName = "Benedikt";
+    $lastName = "Brenk";
+
+    $User = new User($exampleName, $examplePassword, $firstName, $lastName);
+    $User->senderName = $exampleName;
+    $User->senderPassword = $examplePassword;
+    $User->firstName = $firstName;
+    $User->lastName = $lastName;
+
+    $send_result = $User->login($_POST["user_name"], $_POST["password"]);
+    
+    if ($send_result) {
+        $result = "Successfully logged in";
+    } else {
+        $result = "Wrong user name or password!";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -12,19 +40,30 @@
 </head>
 
 <body>
-    <?php  require_once("./components/navbar.php") ?>
-    <div class="container">
-        <h1>Login</h1>
-        <form>
-            <div class="form-group">
-                <label for="username">Benutzername:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
+    <?php require_once("./components/header.php"); ?>
+    <div class="container my-4">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Login</h1>
+        </div>
+        <?php if (!empty($result)): ?>
+            <div class="alert alert-info text-center">
+                <?= htmlspecialchars($result) ?>
             </div>
-            <div class="form-group">
-                <label for="password">Passwort:</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
-            </div>
-            <button type="submit" class="btn btn-primary">Einloggen</button>
-        </form>
-    </div>
-    <?php  require_once("./components/footer.php") ?>
+        <?php endif; ?>
+        <div class="container">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="username">User name:</label>
+                    <input type="text" name="user_name" class="form-control" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div> 
+    <?php require_once("./components/footer.php"); ?>
+</body>
+</html>
