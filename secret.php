@@ -13,8 +13,8 @@
 
     <?php  require_once("./components/header.php") ?>
     <div class="container">
-        <h1>Geheime Informationen</h1>
-        <p>Vollständiger Name: [Ihr Name]</p>
-        <p>Adresse: [Ihre Adresse]</p>
+        <h1>Secret information</h1>
+        <p>Vollständiger Name: Benedikt Martin Brenk</p>
+        <p>Adresse: I will not reveal my adress on GitHub</p>
     </div>
     <?php  require_once("./components/footer.php") ?>
