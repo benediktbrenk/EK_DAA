@@ -22,43 +22,12 @@ $result = $controller->sendMessage();
 <div class="container my-4">
     <div class="text-center mb-4">
         <h1 class="display-4">About Me</h1>
-        <p class="lead">Here are some of my skills and learnings from the course.</p>
+        <p class="lead">Here are some of my learnings and improvements from the course.</p>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">PHP Basics</h5>
-                    <p class="card-text">Understand how to include files in PHP to increase code reusability.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Bootstrap Templates</h5>
-                    <p class="card-text">Working with Bootstrap to create responsive designs that look good on all devices.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">JavaScript</h5>
-                    <p class="card-text">Knowledge of JavaScript to improve interactivity on websites.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Forms</h5>
-                    <p class="card-text">Use Forms with PHP and JavaScript</p>
-                </div>
-            </div>
-        </div>
+    
+    <div class="row" id="cards">
     </div>
-
+    
     <div class="text-center mb-4">
         <h1 class="display-4">Questions? Contact me!</h1>
     </div>

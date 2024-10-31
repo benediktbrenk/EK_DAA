@@ -18,5 +18,37 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./components/navbar.js"></script>
+<script src="./data/learnings.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cardsContainer = document.getElementById("cards");
+
+            learnings.map((learning) => {
+                const colDiv = document.createElement("div");
+                colDiv.className = "col-md-4";
+
+                const cardDiv = document.createElement("div");
+                cardDiv.className = "card mb-4";
+
+                const cardBody = document.createElement("div");
+                cardBody.className = "card-body";
+
+                const cardTitle = document.createElement("h5");
+                cardTitle.className = "card-title";
+                cardTitle.textContent = learning.title;
+
+                const cardText = document.createElement("p");
+                cardText.className = "card-text";
+                cardText.textContent = learning.description;
+
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardText);
+                cardDiv.appendChild(cardBody);
+                colDiv.appendChild(cardDiv);
+
+                cardsContainer.appendChild(colDiv);
+            });
+        });
+    </script>
 </body>
 </html>
