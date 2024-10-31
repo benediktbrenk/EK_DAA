@@ -18,10 +18,4 @@
         <p>Vollständiger Name: [Ihr Name]</p>
         <p>Adresse: [Ihre Adresse]</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./components/navbar.js"></script>
-</body>
-
-</html>
+    <?php  require_once("./components/footer.php") ?>
