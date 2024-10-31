@@ -16,7 +16,7 @@
             <h1>Welcome to my page!</h1>
             <p class="lead">I'm Benedikt Brenk from Standort COE and this is my page for the Web Programming class by Ali Khorsandfard (Informatiker Sommer 2024)</p>
             <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+                <a href="about.php" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
             </p>
         </div>
     <?php require_once("./components/footer.php") ?>
