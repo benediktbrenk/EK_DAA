@@ -1,3 +1,9 @@
+<?php
+require_once(".\app\ContactController.php");
+$controller = new ContactController();
+$result = $controller->sendMessage();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,17 +63,18 @@
         <h1 class="display-4">Questions? Contact me!</h1>
     </div>
 
-    <form>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Contact Me</button>
-    </form>
+    <form method="POST">
+    <?= isset($result) ? $result : ''; ?> 
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="visitor_email" class="form-control" placeholder="Email optional" maxlength="120">
+    </div>
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea name="body" class="form-control" placeholder="Your message" required minlength="10" maxlength="900"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Contact Me</button>
+</form>
 
 </div>
 
